@@ -1,5 +1,5 @@
 ---
-index_img: /img/scenery/mist.png
+index_img: /img/scenery/mist.webp
 title: "本科期间获奖经历"
 date: 2026-8-24 12:00:00
 categories: "学习"

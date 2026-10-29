@@ -1,5 +1,5 @@
 ---
-index_img: /img/scenery/lake.png
+index_img: /img/scenery/lake.webp
 title: "Apple 图书无法从云端同步的解决办法"
 date: 2026-8-23 12:00:00
 categories: "科技"

@@ -1,5 +1,5 @@
 ---
-index_img: /img/scenery/sunrise.png
+index_img: /img/scenery/sunrise.webp
 title: "大唐杯证书查询步骤"
 date: 2026-8-23 12:00:00
 categories: "学习"

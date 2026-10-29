@@ -38,6 +38,10 @@ pretty_urls:
 source_dir: source
 public_dir: public
 
+# 首页每页显示的文章数量
+index_generator:
+  per_page: 6
+
 # 跳过渲染的文件
 skip_render:
   - README.md

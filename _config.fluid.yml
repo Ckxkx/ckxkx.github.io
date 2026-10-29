@@ -18,11 +18,11 @@
 
 # 用于浏览器标签的图标
 # Icon for browser tab
-favicon: /img/chen-portrait.png?v=2
+favicon: /img/chen-icon.png?v=3
 
 # 用于苹果设备的图标
 # Icon for Apple touch
-apple_touch_icon: /img/chen-portrait.png?v=2
+apple_touch_icon: /img/chen-icon.png?v=3
 
 # 浏览器标签页中的标题分隔符，效果：文章名 - 站点名
 # Title separator in browser tab, eg: article - site
@@ -447,7 +447,7 @@ scroll_top_arrow:
 # See: https://hexo.io/docs/helpers.html#open-graph
 open_graph:
   enable: true
-  image: https://ckxkx.github.io/img/chen-portrait.png
+  image: https://ckxkx.github.io/img/chen-portrait-small.webp
   twitter_card: summary_large_image
   twitter_id:
   twitter_site:
@@ -500,7 +500,7 @@ footer:
 index:
   # 首页 Banner 头图，可以是相对路径或绝对路径，以下相同
   # Path of Banner image, can be a relative path or an absolute path, the same on other pages
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
 
   # 头图高度，屏幕百分比
   # Height ratio of banner image
@@ -575,13 +575,13 @@ index:
 # Post Page
 #---------------------------
 post:
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 70
   banner_mask_alpha: 0.3
 
   # 文章在首页的默认封面图，当没有指定 index_img 时会使用该图片，若两者都为空则不显示任何图片
   # Path of the default post cover when `index_img` is not set. If both are empty, no image will be displayed
-  default_index_img: /img/scenery/mist.png
+  default_index_img: /img/scenery/mist.webp
 
   # 文章标题下方的元信息
   # Meta information below title
@@ -947,7 +947,7 @@ discuss:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -958,7 +958,7 @@ archive:
 #---------------------------
 category:
   enable: true
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -987,7 +987,7 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 80
   banner_mask_alpha: 0.3
   tagcloud:
@@ -1004,10 +1004,10 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 60
   banner_mask_alpha: 0.4
-  avatar: /img/chen-portrait.png
+  avatar: /img/chen-portrait-small.webp
   name: "朱会琛"
   intro: "热爱代码与生活，喜欢把想法变成可以运行的东西。这里是我的自留地，记录技术，也记录思考。"
   # 更多图标可从 https://fluid.ist/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
@@ -1024,7 +1024,7 @@ about:
 # Custom Page through `hexo new page`
 #---------------------------
 page:
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
 
@@ -1035,7 +1035,7 @@ page:
 #---------------------------
 page404:
   enable: true
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 85
   banner_mask_alpha: 0.3
   # 重定向到首页的延迟(毫秒)
@@ -1049,7 +1049,7 @@ page404:
 #---------------------------
 links:
   enable: true
-  banner_img: /img/fluid-background.webp
+  banner_img: /img/fluid-background-optimized.webp
   banner_img_height: 60
   banner_mask_alpha: 0.3
   # 友链的成员项
@@ -1076,13 +1076,13 @@ links:
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
-  onerror_avatar: /img/chen-portrait.png
+  onerror_avatar: /img/chen-portrait-small.webp
 
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
   custom:
     enable: false
-    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://fluid.ist</li><li>图片：https://fluid.ist/img/chen-portrait.png</li></ul>'
+    content: '<hr><p>在下方留言申请加入我的友链，按如下格式提供信息：</p><ul><li>博客名：Fluid</li><li>简介：Fluid 主题官方博客</li><li>链接：https://fluid.ist</li><li>图片：https://fluid.ist/img/chen-portrait-small.webp</li></ul>'
 
   # 评论插件
   # Comment plugin

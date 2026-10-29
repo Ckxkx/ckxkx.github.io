@@ -1,5 +1,5 @@
 ---
-index_img: /img/scenery/lake.png
+index_img: /img/scenery/lake.webp
 title: "解决 Codex 等国外 AI 软件断连 / 重新连接问题"
 date: 2026-8-23 12:00:00
 categories: "科技"

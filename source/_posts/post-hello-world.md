@@ -1,5 +1,5 @@
 ---
-index_img: /img/scenery/lake.png
+index_img: /img/scenery/lake.webp
 title: "你好，世界"
 date: 2026-8-15 12:00:00
 categories: "学习"
@@ -8,7 +8,7 @@ tags: ["学习","随笔"]
 
 这是我的第一篇文章，记录一些关于学习和技术的初步想法。
 
-<div><p>这是我个人博客的第一篇文章。</p>
+<p>这是我个人博客的第一篇文章。</p>
 <p>建立这个空间的初衷很简单——我希望能有一个地方，安静地记录自己的学习过程、技术思考，以及一些不成熟的想法。</p>
 <h2>为什么写博客</h2>
 <p>在信息过载的时代，写博客似乎已经不是什么新鲜事。但我觉得，写作本身就是一种学习方式。当你试图把一个模糊的想法用文字清晰地表达出来时，你会发现自己对它的理解远比想象中更浅。</p>
@@ -25,15 +25,20 @@ tags: ["学习","随笔"]
 <li>一些技术以外的生活感悟</li>
 </ul>
 <p>希望这个空间能够见证我的成长，也希望能对偶然到访的读者有所帮助。</p>
-<pre class="language-python" data-language="python"><code class="language-python"><span class="token comment"># 一个简单的开始</span>
-<span class="token keyword">def</span> <span class="token function">hello_world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Hello, World!&quot;</span><span class="token punctuation">)</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;你好，世界！&quot;</span><span class="token punctuation">)</span>
 
-<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">&quot;__main__&quot;</span><span class="token punctuation">:</span>
-    hello_world<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+
+```python
+# 一个简单的开始
+def hello_world():
+    print("Hello, World!")
+    print("你好，世界！")
+
+if __name__ == "__main__":
+    hello_world()
+```
+
+
 <p>保持好奇，继续学习。</p>
-</div>
+
 
 [旧站收藏页面](https://cvpr.zone.id/collection/post-hello-world/)
