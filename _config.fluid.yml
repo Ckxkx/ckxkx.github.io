@@ -1006,7 +1006,7 @@ about:
   banner_img: /img/banner.png
   banner_img_height: 60
   banner_mask_alpha: 0.4
-  avatar: /img/avatar.png
+  avatar: /img/profile.jpg
   name: "朱会琛"
   intro: "热爱代码与生活，喜欢把想法变成可以运行的东西。这里是我的自留地，记录技术，也记录思考。"
   # 更多图标可从 https://fluid.ist/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
@@ -1075,7 +1075,7 @@ links:
 
   # 当成员头像加载失败时，替换为指定图片
   # When the member avatar fails to load, replace the specified image
-  onerror_avatar: /img/avatar.png
+  onerror_avatar: /img/profile.jpg
 
   # 友链下方自定义区域，支持 HTML，可插入例如申请友链的文字
   # Custom content at the bottom of the links
