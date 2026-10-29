@@ -1,0 +1,5 @@
+.navbar-brand { font-weight: 700; letter-spacing: .08em; }
+#board { border-radius: 12px; }
+.index-card { transition: transform .2s ease; }
+.index-card:hover { transform: translateY(-3px); }
+.post-content { line-height: 1.9; }

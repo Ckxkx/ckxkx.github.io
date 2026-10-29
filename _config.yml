@@ -1,0 +1,65 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# 网站信息
+title: chen
+subtitle: 记录代码，也记录生活
+description: 朱会琛的个人博客，分享技术与思考
+author: 朱会琛
+language: zh-CN
+timezone: Asia/Shanghai
+
+# 部署地址（GitHub Pages 用户站点，根路径）
+url: https://ckxkx.github.io
+root: /
+
+# 导航栏
+nav:
+  - text: 首页
+    url: /
+  - text: 归档
+    url: /archives/
+  - text: 分类
+    url: /categories/
+  - text: 标签
+    url: /tags/
+  - text: 关于
+    url: /about/
+
+# 文章链接格式
+permalink: :year/:month/:day/:title/
+permalink_defaults:
+pretty_urls:
+  trailing_index: true
+  trailing_html: true
+
+# 目录结构
+source_dir: source
+public_dir: public
+
+# 跳过渲染的文件
+skip_render:
+  - README.md
+
+# Markdown 配置
+markdown:
+  highlight:
+    enable: true
+    line_number: true
+    style: 'github'
+  external_link:
+    enable: true
+    field: site
+  anchor:
+    enable: true
+    level: [1, 2, 3, 4, 5, 6]
+
+# 引用图片的最小宽度
+image_min:
+
+# 主题
+theme: fluid
+
+# 部署到 GitHub Pages
+deploy: {}
