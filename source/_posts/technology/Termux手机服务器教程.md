@@ -1,6 +1,6 @@
 ---
 permalink: /2026/08/18/website-f8862cb5-7a7d-498f-9037-2bc9b3248642/
-index_img: /img/covers/termux-server-tutorial.webp
+index_img: /img/covers/Termux教程封面.webp
 title: "Termux 入门教程：架设手机 Server 下载文件"
 date: 2026-8-18 12:00:00
 categories: 科技
