@@ -61,3 +61,7 @@
 
 
 <!-- 网站维护：如需固定首页顺序，在 scripts/index-order.js 的 order 列表中，把新文章路径放在最前。未列入的文章会先显示并按文件名排列。 -->
+# 图片优化
+
+GitHub Pages 工作流在 Hexo 生成后，使用 Pillow 优化 `source/` 中的 JPEG 和 PNG 对应的 `public/` 副本：JPEG 以质量 88 编码，PNG 无损压缩，仅在结果更小时替换。原图、文件名和文章链接不变；动画、WebP、GIF、SVG 等保持原样。后续上传到 `source/` 的图片会在每次部署构建时自动处理。外链图片不会处理。要在本地执行，请先安装 Pillow 12.2.0，运行 `npm run build`，再运行 `python tools/optimize-images.py`。
+
