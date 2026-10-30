@@ -3,7 +3,7 @@ permalink: /2026/08/16/post-exploring-computer-vision/
 index_img: /img/scenery/sunrise.webp
 title: "初探计算机视觉：从图像分类到目标检测"
 date: 2026-8-16 12:00:00
-categories: "科技"
+categories: [科技, 计算机视觉]
 tags: []
 ---
 

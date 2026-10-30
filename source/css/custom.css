@@ -3,3 +3,4 @@
 .index-card { transition: transform .2s ease; }
 .index-card:hover { transform: translateY(-3px); }
 .post-content { line-height: 1.9; }
+.index-btm .post-meta:has(.category-chains) { flex-basis: 100%; margin-top: .3rem; }

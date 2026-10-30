@@ -3,7 +3,7 @@ permalink: /2026/08/14/note-m1/
 index_img: /img/scenery/sunrise.webp
 title: "今天终于把巡检机器人的视觉模块调通了。看着模型在小样本上也能稳定识别目标，突然理解了什么叫\"数据是 AI 的燃料\"。继续加油。"
 date: 2026-8-14 12:00:00
-categories: "生活"
+categories: [生活, 日常随笔]
 tags: []
 ---
 
