@@ -9,9 +9,9 @@ tags: []
 
 Termux 美化
 
-<div><h3>玩转termux美化</h3>
-<p>Termux 入门教程：架设手机 Server 下载文件
-阮一峰大神出品，必是精品</p>
-</div>
+### 玩转termux美化
+
+Termux 入门教程：架设手机 Server 下载文件
+阮一峰大神出品，必是精品
 
 [访问原始内容](https://www.ruanyifeng.com/blog/2019/07/termux-tutorial.html)
