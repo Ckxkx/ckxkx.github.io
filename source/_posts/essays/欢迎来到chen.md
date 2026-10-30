@@ -1,11 +1,10 @@
----
 permalink: /2026/10/30/welcome/
 index_img: /img/scenery/lake.webp
-title: 你好，世界
-date: 2026-10-30 12:00:00
-categories: 随笔
+title: Hexo 的第一篇笔记
 tags:
   - 开始
+categories:
+  - 生活
 ---
 
 欢迎来到 **chen**。这里是朱会琛的个人网站，用来记录学习、技术与生活中的想法。
