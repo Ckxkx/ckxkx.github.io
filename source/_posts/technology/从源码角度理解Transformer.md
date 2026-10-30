@@ -1,3 +1,6 @@
+---
+date: 2026-10-30 19:16:50
+index_img: /images/uploads/Transformer架构.png
 title: 从源码角度理解Transformer
 tags:
   - Transformer
