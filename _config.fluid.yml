@@ -132,7 +132,7 @@ dark_mode:
   # 默认的选项（当用户手动切换后则不再按照默认模式），选择 `auto` 会优先遵循 prefers-color-scheme，其次按用户本地时间 18 点到次日 6 点之间进入暗色模式
   # Default option (when the visitor switches manually, the default mode is no longer followed), choosing `auto` will give priority to prefers-color-scheme, and then enter the dark mode from 18:00 to 6:00 in the visitor's local time
   # Options: auto | light | dark
-  default: dark
+  default: light
 
 # 主题颜色配置，其他不生效的地方请使用自定义 css 解决，配色可以在下方链接中获得启发
 # Theme color, please use custom CSS to solve other colors, color schema can be inspired by the links below
@@ -233,6 +233,15 @@ font:
 
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
+custom_head: |
+  <script>
+    (function () {
+      var path = location.pathname;
+      var home = path === '/' || path === '/index.html' || /^\/page\/\d+\/?(?:index\.html)?$/.test(path);
+      document.documentElement.setAttribute('data-default-color-scheme', home ? 'dark' : 'light');
+    })();
+  </script>
+
 custom_js:
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
