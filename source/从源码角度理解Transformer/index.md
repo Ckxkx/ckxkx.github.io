@@ -1,4 +1,9 @@
 title: 从源码角度理解Transformer
+tags:
+  - Transformer
+  - 大模型
+categories:
+  - 学习
 ---
 ![Transformer架构.png](/images/uploads/Transformer架构.png)
 
