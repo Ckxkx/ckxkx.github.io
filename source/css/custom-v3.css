@@ -1,0 +1,9 @@
+.navbar-brand { font-weight: 700; letter-spacing: .08em; }
+#board { border-radius: 12px; }
+.index-card { transition: transform .2s ease; }
+.index-card:hover { transform: translateY(-3px); }
+.post-content { line-height: 1.9; }
+.index-btm > .post-meta:not(.mr-3) { flex-basis: 100%; margin-top: .35rem; }
+
+@font-face { font-family: "Fira Code"; src: url("/fonts/FiraCode-Regular.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+.markdown-body code, .markdown-body pre, .highlight pre, .highlight code { font-family: "Fira Code", monospace; font-variant-ligatures: contextual; }

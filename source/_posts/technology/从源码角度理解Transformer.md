@@ -1,4 +1,7 @@
+---
+date: 2026-10-30 19:16:50
 index_img: /images/uploads/Transformer架构.png
+mermaid: true
 title: 从源码角度理解Transformer
 tags:
   - Transformer
@@ -6,27 +9,27 @@ tags:
 categories:
   - 学习
 ---
-<img src="/images/uploads/Transformer架构.png" alt="Transformer架构.png" style="width:50%">
+<img src="/images/uploads/Transformer架构.png" alt="Transformer架构.png" style="width:70%; max-width:100%;">
 
 # 从源码角度理解Transformer
 
 理解 Transformer，可以先沿着一个张量往下走：输入是什么形状，经过哪一步计算，哪些位置交换了信息，最后又变成什么形状。
 
-本文以自己的 `Transformer.py` 修正版为线索，依次拆解五个类：`PositionalEncoding`、`MultiHeadAttention`、`PositionWiseFeedForward`、`EncoderLayer` 和 `DecoderLayer`。缩放点积的数值计算也可以结合 [[缩放点积公式代码详解]] 一起阅读。
+本文以自己的 `Transformer.py` 修正版为线索，依次拆解五个类：`PositionalEncoding`、`MultiHeadAttention`、`PositionWiseFeedForward`、`EncoderLayer` 和 `DecoderLayer`。文中也会逐步解释缩放点积的数值计算。
 
 这份源码实现了编码器和解码器的核心层。词嵌入、多层堆叠、词表输出层与训练循环还需要在外部组装。本文最后给出一个把这些核心层连起来的运行示例。
 
 **按不熟悉的内容选择入口：**
 
-| 想弄清的问题                                              | 阅读位置                                 |                                       |            |
-| --------------------------------------------------- | ------------------------------------ | ------------------------------------- | ---------- |
-| `self`、`super()`、`forward()`、`dim`、切片是什么意思？         | [[#零、先读懂代码里的 Python 和张量语法\            | 零：基础语法与张量]]                           |            |
-| `arange`、`exp`、`sin/cos`、`register_buffer` 怎么用？     | [[#二、PositionalEncoding：告诉模型“我在哪里”\   | 二：位置编码与具体数值]]                         |            |
-| `Linear`、`view`、`transpose`、`matmul`、`softmax` 怎么用？ | [[#三、MultiHeadAttention：让不同位置交换信息\    | 三：多头注意力]]                             |            |
-| `~mask`、`&`、`masked_fill`、`all`、`keepdim` 是什么？      | [[#四、Mask：限定每个 Query 能看哪些 Key\        | 四：掩码逐步计算]]                            |            |
-| 为什么 `transpose` 后还要 `contiguous`？                   | [[#五、combine_heads：把多头结果还原\           | 五：合头与内存布局]]                           |            |
-| `ReLU`、`Dropout`、`LayerNorm` 各做什么？                  | [[#六、PositionWiseFeedForward：逐位置加工特征\ | 六：前馈与激活]]、[[#七、EncoderLayer：把两个子层组装起来\ | 七：归一化与残差]] |
-| `Embedding`、`reshape`、交叉熵、`backward` 如何连接？          | [[#九、最小运行示例：把源码中的层接起来\                | 九：完整例子与函数拆解]]                         |            |
+| 想弄清的问题 | 阅读位置 |
+| --- | --- |
+| `self`、`super()`、`forward()`、`dim`、切片是什么意思？ | [基础语法与张量](#零、先读懂代码里的-Python-和张量语法) |
+| `arange`、`exp`、`sin/cos`、`register_buffer` 怎么用？ | [位置编码与具体数值](#二、PositionalEncoding：告诉模型“我在哪里”) |
+| `Linear`、`view`、`transpose`、`matmul`、`softmax` 怎么用？ | [多头注意力](#三、MultiHeadAttention：让不同位置交换信息) |
+| `~mask`、`&`、`masked_fill`、`all`、`keepdim` 是什么？ | [掩码逐步计算](#四、Mask：限定每个-Query-能看哪些-Key) |
+| 为什么 `transpose` 后还要 `contiguous`？ | [合头与内存布局](#五、combine-heads：把多头结果还原) |
+| `ReLU`、`Dropout`、`LayerNorm` 各做什么？ | [前馈与激活](#六、PositionWiseFeedForward：逐位置加工特征)、[归一化与残差](#七、EncoderLayer：把两个子层组装起来) |
+| `Embedding`、`reshape`、交叉熵、`backward` 如何连接？ | [完整例子与函数拆解](#九、最小运行示例：把源码中的层接起来) |
 
 小例子的浮点输出按便于阅读的精度展示；实际打印有时会出现 `0.10000000149` 等尾数，这是浮点表示的正常现象。新增可独立运行的代码块已经在本机 PyTorch 环境执行核对。
 
