@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/23/datang-certificate-query/
 index_img: /img/scenery/sunrise.webp
 title: "大唐杯证书查询步骤"
 date: 2026-8-23 12:00:00
@@ -10,25 +11,25 @@ tags: ["保研"]
 
 <div><h2>前言</h2>
 <p>参加&quot;大唐杯&quot;全国大学生新一代信息通信技术大赛后，证书需要在线查询。本文记录完整的证书查询步骤，按顺序操作即可。</p>
-<p><img src="https://cvpr.zone.id/images/uploads/datang/datang-3.png" alt="大唐杯赛事"></p>
+<p><img src="/media/c6edfb17b3b8f522.png" alt="大唐杯赛事"></p>
 <h2>第一步：打开大赛官网</h2>
 <p>在浏览器中打开网址：<strong><a href="https://www.ksup.cn">https://www.ksup.cn</a></strong></p>
 <p>这是大学生新一代信息通信科技大赛（大唐杯）的官方网站，所有证书查询操作都从这里开始。</p>
-<p><img src="https://cvpr.zone.id/images/uploads/datang/datang-2.png" alt="大赛官网首页"></p>
+<p><img src="/media/9b703bb52029fc75.png" alt="大赛官网首页"></p>
 <h2>第二步：登录账号</h2>
 <p>进入官网后，点击登录。<strong>账号为报名时提供的手机号</strong>，输入手机号和密码完成登录。</p>
-<p><img src="https://cvpr.zone.id/images/uploads/datang/datang-4.png" alt="官网首页"></p>
+<p><img src="/media/1ec4ead221063e0e.png" alt="官网首页"></p>
 <h2>第三步：进入&quot;我的证书&quot;</h2>
 <p>登录成功后，进入<strong>个人中心 → 我的证书</strong>。</p>
 <p>在这里可以看到参赛获得的证书列表，每张证书右侧有&quot;查询地址&quot;入口。</p>
-<p><img src="https://cvpr.zone.id/images/uploads/datang/datang-1.png" alt="我的证书"></p>
+<p><img src="/media/63986e41a6f1e52b.png" alt="我的证书"></p>
 <h2>第四步：跳转查询平台并查询</h2>
 <p>点击&quot;查询地址&quot;，页面会跳转至<strong>证书查询平台</strong>：</p>
 <blockquote>
 <p><a href="https://cx.miitec.cn/certificateSearch?type=4">https://cx.miitec.cn/certificateSearch?type=4</a></p>
 </blockquote>
 <p>在查询平台中，<strong>复制证书编号</strong>（如 <code>mc12b025132</code>）粘贴到输入框，点击&quot;查询&quot;按钮，即可查看证书信息。</p>
-<p><img src="https://cvpr.zone.id/images/uploads/datang/datang-0.png" alt="证书查询平台"></p>
+<p><img src="/media/e55f9e60e06d769d.png" alt="证书查询平台"></p>
 <h2>总结</h2>
 <p>整个流程非常简单：</p>
 <ol>
@@ -39,5 +40,3 @@ tags: ["保研"]
 </ol>
 <p>证书编号和报名手机号务必提前准备好，以免遗漏。</p>
 </div>
-
-[旧站收藏页面](https://cvpr.zone.id/collection/datang-certificate-query/)

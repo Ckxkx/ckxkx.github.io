@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/23/fix-ai-app-proxy-tun/
 index_img: /img/scenery/lake.webp
 title: "解决 Codex 等国外 AI 软件断连 / 重新连接问题"
 date: 2026-8-23 12:00:00
@@ -33,5 +34,3 @@ tags: ["AI工具","代理","网络"]
 <h2>一句话理解</h2>
 <p>普通代理像是「告诉愿意听话的软件去走代理」；TUN 模式像是在系统网络层面「把大部分流量先拦到代理工具里处理」。所以很多原本不认代理设置的国外软件，开了 TUN 之后就能用了。</p>
 </div>
-
-[旧站收藏页面](https://cvpr.zone.id/collection/fix-ai-app-proxy-tun/)

@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/23/ubuntu-network-nmcli-restart/
 index_img: /img/scenery/sunrise.webp
 title: "解决 Ubuntu 没有网络的真神命令"
 date: 2026-8-23 12:00:00
@@ -53,6 +54,3 @@ sudo dhclient
 <li>无线网络下，重启后可能需要重新连接 Wi-Fi</li>
 <li>在远程服务器上操作时注意：网络重启瞬间 SSH 会短暂断开，随后恢复</li>
 </ul>
-
-
-[旧站收藏页面](https://cvpr.zone.id/collection/ubuntu-network-nmcli-restart/)

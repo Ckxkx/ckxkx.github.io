@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/23/git-remove-clone-link/
 index_img: /img/scenery/mist.webp
 title: "删除 clone 项目中的 Git 链接"
 date: 2026-8-23 12:00:00
@@ -34,6 +35,3 @@ find . -name ".git" | xargs rm -rf
 <li>失去 <code>git log</code>、<code>git diff</code> 等历史功能</li>
 <li>如需重新建立版本管理，可以 <code>git init</code> 初始化一个新仓库</li>
 </ul>
-
-
-[旧站收藏页面](https://cvpr.zone.id/collection/git-remove-clone-link/)

@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/17/project-smart-robot/
 index_img: /img/covers/project-smart-robot.webp
 title: "智慧社区自主巡检机器人"
 date: 2026-8-17 12:00:00
@@ -14,7 +15,7 @@ tags: ["保研"]
 <p><strong>导航模块</strong>：基于 SLAM 技术实现地图构建和自主定位，结合动态路径规划算法实现智能巡检路线。</p>
 <p><strong>视觉识别模块</strong>：基于深度学习的目标检测模型，可识别多种社区异常场景。</p>
 <p><strong>通信模块</strong>：支持远程监控和告警信息推送。</p>
-<p><img src="https://rehzjferdreclcgglezy.supabase.co/storage/v1/object/public/blog-images/a27f32ef-8294-4e5e-9277-8f29cb798459/1787462599601-.jpg" alt="image.jpg"></p>
+<p><img src="/media/1ce8b2d81b8eb51a.jpg" alt="image.jpg"></p>
 <h2>技术细节</h2>
 <h3>目标检测模型</h3>
 <p>我们基于 YOLOv8 进行了定制化改进，针对社区场景中的小目标（如违停标志、消防通道堵塞等）进行了优化。</p>
@@ -40,6 +41,3 @@ model_config = {
 <p>采用 A* 算法结合 DWA（Dynamic Window Approach）实现全局规划和局部避障的协同工作。</p>
 <h2>总结</h2>
 <p>这个项目让我深入理解了从算法研究到工程落地的完整过程。在解决实际问题的过程中，我不仅提升了技术能力，也学会了如何从系统层面思考问题。</p>
-
-
-[旧站收藏页面](https://cvpr.zone.id/collection/project-smart-robot/)

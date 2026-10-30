@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/23/windows-refresh-env-vars/
 index_img: /img/scenery/mist.webp
 title: "刷新 Windows 系统环境变量命令"
 date: 2026-8-23 12:00:00
@@ -33,6 +34,3 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 <li>若需要每次打开终端自动刷新，可以把命令加入 PowerShell 的 <code>&#x24;PROFILE</code></li>
 <li>命令行 CMD 中可改用：<code>refreshenv</code>（需安装 Chocolatey 环境增强）或重开窗口</li>
 </ul>
-
-
-[旧站收藏页面](https://cvpr.zone.id/collection/windows-refresh-env-vars/)

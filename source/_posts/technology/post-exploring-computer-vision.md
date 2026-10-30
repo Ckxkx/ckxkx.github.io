@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/16/post-exploring-computer-vision/
 index_img: /img/scenery/sunrise.webp
 title: "初探计算机视觉：从图像分类到目标检测"
 date: 2026-8-16 12:00:00
@@ -46,6 +47,3 @@ class ResidualBlock(nn.Module):
 <blockquote>
 <p>计算机视觉不仅是一项技术，更是我们理解智能本质的一扇窗口。</p>
 </blockquote>
-
-
-[旧站收藏页面](https://cvpr.zone.id/collection/post-exploring-computer-vision/)

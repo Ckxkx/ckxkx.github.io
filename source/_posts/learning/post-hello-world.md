@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/15/post-hello-world/
 index_img: /img/scenery/lake.webp
 title: "你好，世界"
 date: 2026-8-15 12:00:00
@@ -39,6 +40,3 @@ if __name__ == "__main__":
 
 
 <p>保持好奇，继续学习。</p>
-
-
-[旧站收藏页面](https://cvpr.zone.id/collection/post-hello-world/)

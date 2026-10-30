@@ -1,4 +1,5 @@
 ---
+permalink: /2026/08/23/apple-books-cloud-sync/
 index_img: /img/scenery/lake.webp
 title: "Apple 图书无法从云端同步的解决办法"
 date: 2026-8-23 12:00:00
@@ -24,5 +25,3 @@ Apple 图书（Books）从 iCloud 下载书籍失败，多半是触发了苹果�
 <li>蜂窝网络下可以开启「设置 → 图书 → 使用蜂窝数据」，但下载大文件仍建议在 Wi-Fi 下进行</li>
 </ul>
 </div>
-
-[旧站收藏页面](https://cvpr.zone.id/collection/apple-books-cloud-sync/)

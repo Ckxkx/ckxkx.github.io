@@ -1,17 +1,11 @@
-# chen
+﻿# 朱会琛 · chen
 
-朱会琛的个人博客，使用 Hexo 和 Fluid 主题。
+你好，我是朱会琛，山东师范大学计算机科学与技术专业学生，关注计算机视觉、边缘智能与智能体安全。
 
-## 本地使用
+我参与过智慧社区自主巡检机器人和植物病虫害精准诊断系统等项目，也喜欢篮球、乒乓球和健身。
 
-安装 Node.js 22 后，运行 `npm ci` 安装依赖，运行 `npm run server` 预览。
-使用 `npx hexo new "文章标题"` 创建文章，编辑 `source/_posts/` 中的 Markdown 文件。
-提交并推送到 `main` 后，GitHub Actions 自动构建和发布。
+在 [chen 个人网站](https://ckxkx.github.io/)记录技术、学习与生活。欢迎通过 [GitHub](https://github.com/Ckxkx) 或 [邮件](mailto:huichen_zhu@qq.com)联系我。
 
-GitHub 仓库的 Settings → Pages → Build and deployment → Source 需选择 **GitHub Actions**。
+## 运行博客
 
-## 图片来源
-
-- 页面背景使用 [Fluid 示例网站](https://hexo.fluid-dev.com/)的背景图。
-- 部分文章封面来自旧站 [数字收藏馆](https://cvpr.zone.id/)。
-- 其他文章封面使用哲风壁纸的[湖泊雪山](https://haowallpaper.com/homeViewLook/16318703208746368)、[山林晨曦](https://haowallpaper.com/homeViewLook/16926612329713024)和[朱砂湖日出](https://haowallpaper.com/homeViewLook/19875530993587072)。
+本网站使用 Hexo 和 Fluid。安装 Node.js 22 后，执行 `npm ci` 安装依赖，执行 `npm run server` 本地预览。文章保存在 `source/_posts/` 下的分类文件夹，推送到 `main` 后通过 GitHub Actions 自动发布。
