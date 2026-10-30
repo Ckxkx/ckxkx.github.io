@@ -15,7 +15,7 @@ tags: ["保研"]
 <p><strong>导航模块</strong>：基于 SLAM 技术实现地图构建和自主定位，结合动态路径规划算法实现智能巡检路线。</p>
 <p><strong>视觉识别模块</strong>：基于深度学习的目标检测模型，可识别多种社区异常场景。</p>
 <p><strong>通信模块</strong>：支持远程监控和告警信息推送。</p>
-<p><img src="/media/1ce8b2d81b8eb51a.jpg" alt="image.jpg"></p>
+<p><img src="/media/smart-robot-project.jpg" alt="image.jpg"></p>
 <h2>技术细节</h2>
 <h3>目标检测模型</h3>
 <p>我们基于 YOLOv8 进行了定制化改进，针对社区场景中的小目标（如违停标志、消防通道堵塞等）进行了优化。</p>

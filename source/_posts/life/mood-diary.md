@@ -1,6 +1,6 @@
 ---
 permalink: /2026/08/16/note-m3/
-index_img: /img/covers/note-m3.webp
+index_img: /img/covers/mood-diary.webp
 title: "心情日记"
 date: 2026-8-16 12:00:00
 categories: 生活
