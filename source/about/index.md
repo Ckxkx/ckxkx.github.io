@@ -15,8 +15,7 @@ layout: about
 
 ## 联系方式
 
-[zhc425@126.com](mailto:zhc425@126.com) 
-[telephone](17860567553)                 [GitHub](https://github.com/Ckxkx)
+[zhc425@126.com](mailto:zhc425@126.com) [GitHub](https://github.com/Ckxkx)
 
 ## 项目经历
 
