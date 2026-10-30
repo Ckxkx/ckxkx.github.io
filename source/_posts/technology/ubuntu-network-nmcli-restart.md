@@ -3,7 +3,7 @@ permalink: /2026/08/23/ubuntu-network-nmcli-restart/
 index_img: /img/scenery/sunrise.webp
 title: "解决 Ubuntu 没有网络的真神命令"
 date: 2026-8-23 12:00:00
-categories: [科技, 系统与网络]
+categories: 科技
 tags: ["Ubuntu","Linux","网络"]
 ---
 

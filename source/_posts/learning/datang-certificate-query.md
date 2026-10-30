@@ -3,7 +3,7 @@ permalink: /2026/08/23/datang-certificate-query/
 index_img: /img/scenery/sunrise.webp
 title: "大唐杯证书查询步骤"
 date: 2026-8-23 12:00:00
-categories: [学习, 实用指南]
+categories: 学习
 tags: ["保研"]
 ---
 

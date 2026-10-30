@@ -3,7 +3,7 @@ permalink: /2026/08/23/git-remove-clone-link/
 index_img: /img/scenery/mist.webp
 title: "删除 clone 项目中的 Git 链接"
 date: 2026-8-23 12:00:00
-categories: [科技, 开发工具]
+categories: 科技
 tags: ["Git","开发工具"]
 ---
 

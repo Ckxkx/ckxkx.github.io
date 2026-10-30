@@ -3,7 +3,7 @@ permalink: /2026/08/24/baoyan-awards/
 index_img: /img/scenery/mist.webp
 title: "本科期间获奖经历"
 date: 2026-8-24 12:00:00
-categories: [学习, 获奖经历]
+categories: 学习
 tags: ["保研"]
 ---
 

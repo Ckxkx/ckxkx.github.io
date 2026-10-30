@@ -3,7 +3,7 @@ permalink: /2026/10/30/welcome/
 index_img: /img/scenery/lake.webp
 title: 你好，世界
 date: 2026-10-30 12:00:00
-categories: [随笔, 网站随笔]
+categories: 随笔
 tags:
   - 开始
 ---

@@ -3,7 +3,7 @@ permalink: /2026/08/23/fix-ai-app-proxy-tun/
 index_img: /img/scenery/lake.webp
 title: "解决 Codex 等国外 AI 软件断连 / 重新连接问题"
 date: 2026-8-23 12:00:00
-categories: [科技, 系统与网络]
+categories: 科技
 tags: ["AI工具","代理","网络"]
 ---
 

@@ -3,7 +3,7 @@ permalink: /2026/08/15/post-hello-world/
 index_img: /img/scenery/lake.webp
 title: "你好，世界"
 date: 2026-8-15 12:00:00
-categories: [学习, 学习记录]
+categories: 学习
 tags: ["学习","随笔"]
 ---
 

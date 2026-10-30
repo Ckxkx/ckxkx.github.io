@@ -3,7 +3,7 @@ permalink: /2026/08/17/project-smart-robot/
 index_img: /img/covers/project-smart-robot.webp
 title: "智慧社区自主巡检机器人"
 date: 2026-8-17 12:00:00
-categories: [科技, 项目实践]
+categories: 科技
 tags: ["保研"]
 ---
 
