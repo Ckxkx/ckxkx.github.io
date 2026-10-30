@@ -1,54 +1,54 @@
-﻿# Hexo Configuration
+# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# 缃戠珯淇℃伅
+# 网站信息
 title: chen
-subtitle: 璁板綍浠ｇ爜锛屼篃璁板綍鐢熸椿
-description: 鏈变細鐞涚殑涓汉鍗氬锛屽垎浜妧鏈笌鎬濊€?
-author: 鏈变細鐞?
+subtitle: 记录代码，也记录生活
+description: 朱会琛的个人博客，分享技术与思考
+author: 朱会琛
 language: zh-CN
 timezone: Asia/Shanghai
 
-# 閮ㄧ讲鍦板潃锛圙itHub Pages 鐢ㄦ埛绔欑偣锛屾牴璺緞锛?
+# 部署地址（GitHub Pages 用户站点，根路径）
 url: https://ckxkx.github.io
 root: /
 
-# 瀵艰埅鏍?
+# 导航栏
 nav:
-  - text: 棣栭〉
+  - text: 首页
     url: /
-  - text: 褰掓。
+  - text: 归档
     url: /archives/
-  - text: 鍒嗙被
+  - text: 分类
     url: /categories/
-  - text: 鏍囩
+  - text: 标签
     url: /tags/
-  - text: 鍏充簬
+  - text: 关于
     url: /about/
 
-# 鏂囩珷閾炬帴鏍煎紡
+# 文章链接格式
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true
   trailing_html: true
 
-# 鐩綍缁撴瀯
+# 目录结构
 source_dir: source
 public_dir: public
 
-# 棣栭〉姣忛〉鏄剧ず鐨勬枃绔犳暟閲?
+# 首页每页显示的文章数量
 index_generator:
   per_page: 8
   order_by: -date
 
-# 璺宠繃娓叉煋鐨勬枃浠?
+# 跳过渲染的文件
 skip_render:
   - README.md
   - google0797029ec6e4e1bd.html
 
-# Markdown 閰嶇疆
+# Markdown 配置
 markdown:
   highlight:
     enable: true
@@ -61,17 +61,16 @@ markdown:
     enable: true
     level: [1, 2, 3, 4, 5, 6]
 
-# 寮曠敤鍥剧墖鐨勬渶灏忓搴?
+# 引用图片的最小宽度
 image_min:
 
-# 涓婚
+# 主题
 theme: fluid
 
-# 閮ㄧ讲鍒?GitHub Pages
+# 部署到 GitHub Pages
 deploy: {}
 
 sitemap:
   path: sitemap.xml
   tags: true
   categories: true
-
