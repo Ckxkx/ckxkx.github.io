@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://ckxkx.github.io/sitemap.xml

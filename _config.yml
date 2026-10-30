@@ -68,3 +68,8 @@ theme: fluid
 
 # 部署到 GitHub Pages
 deploy: {}
+
+sitemap:
+  path: sitemap.xml
+  tags: true
+  categories: true
