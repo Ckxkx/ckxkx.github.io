@@ -1,6 +1,6 @@
 ---
 date: 2026-10-30 19:16:50
-index_img: /images/uploads/Transformer架构.png
+index_img: /images/uploads/Transformer架构.webp
 mermaid: true
 title: 从源码角度理解Transformer
 tags:
@@ -9,7 +9,7 @@ tags:
 categories:
   - 学习
 ---
-<img src="/images/uploads/Transformer架构.png" alt="Transformer架构.png" style="width:70%; max-width:100%;">
+<img src="/images/uploads/Transformer架构.webp" alt="Transformer架构.png" style="width:70%; max-width:100%;">
 
 # 从源码角度理解Transformer
 
