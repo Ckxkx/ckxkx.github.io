@@ -40,7 +40,8 @@ public_dir: public
 
 # 首页每页显示的文章数量
 index_generator:
-  per_page: 6
+  per_page: 8
+  order_by: -date
 
 # 跳过渲染的文件
 skip_render:
