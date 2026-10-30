@@ -1,5 +1,6 @@
+---
 permalink: /2026/10/30/welcome/
-index_img: /img/scenery/lake.webp
+index_img: /img/首页背景.webp
 title: Hexo 的第一篇笔记
 tags:
   - 开始

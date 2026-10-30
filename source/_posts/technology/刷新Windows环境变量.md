@@ -1,6 +1,6 @@
 ---
 permalink: /2026/08/23/windows-refresh-env-vars/
-index_img: /img/scenery/mist.webp
+index_img: /img/scenery/Windows临时加载环境变量.png
 title: "刷新 Windows 系统环境变量命令"
 date: 2026-8-23 12:00:00
 categories: 科技
