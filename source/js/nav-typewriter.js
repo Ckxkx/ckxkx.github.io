@@ -24,8 +24,9 @@
 
   var entries = [Array.from(title), Array.from(phrase)];
   var selected = 0;
-  var index = entries[0].length;
-  var deleting = true;
+  var index = 0;
+  var deleting = false;
+  subtitle.textContent = '';
 
   function tick() {
     if (document.hidden) {
@@ -55,5 +56,5 @@
     window.setTimeout(tick, 95);
   }
 
-  window.setTimeout(tick, 1500);
+  window.setTimeout(tick, 150);
 })();
