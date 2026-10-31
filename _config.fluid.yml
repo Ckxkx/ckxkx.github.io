@@ -100,7 +100,7 @@ fun_features:
     # 在指定页面开启，不填则在所有页面开启
     # Enable in specified page, all pages by default
     # Options: home | post | tag | category | about | links | page | 404
-    scope: ["home", "post", "links"]
+    scope: ["home", "post"]
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -234,7 +234,7 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_head:
-custom_js:
+custom_js: /js/nav-typewriter.js
 
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
