@@ -1069,12 +1069,12 @@ links:
       <div class="row links">
         <div class="card col-lg-4 col-md-6 col-sm-12">
           <a href="https://github.com/hexojs/hexo" class="card-body hover-with-bg" target="_blank" rel="noopener noreferrer">
-            <div class="card-content"><div class="link-text"><div class="link-title">Hexo</div><div class="link-intro">博客框架</div></div></div>
+            <div class="card-content"><div class="link-avatar my-auto"><img src="https://avatars.githubusercontent.com/u/6375567?v=4" alt="Hexo 头像" loading="lazy"></div><div class="link-text"><div class="link-title">Hexo</div><div class="link-intro">hexojs · 博客框架</div></div></div>
           </a>
         </div>
         <div class="card col-lg-4 col-md-6 col-sm-12">
           <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener noreferrer">
-            <div class="card-content"><div class="link-text"><div class="link-title">Fluid</div><div class="link-intro">博客主题</div></div></div>
+            <div class="card-content"><div class="link-avatar my-auto"><img src="https://avatars.githubusercontent.com/u/55058393?v=4" alt="Fluid 头像" loading="lazy"></div><div class="link-text"><div class="link-title">Fluid</div><div class="link-intro">fluid-dev · 博客主题</div></div></div>
           </a>
         </div>
       </div>
