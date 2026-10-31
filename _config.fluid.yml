@@ -100,7 +100,7 @@ fun_features:
     # 在指定页面开启，不填则在所有页面开启
     # Enable in specified page, all pages by default
     # Options: home | post | tag | category | about | links | page | 404
-    scope: ["home", "post"]
+    scope: ["home", "post", "links"]
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -1063,14 +1063,21 @@ links:
   custom:
     enable: true
     content: >-
-      <h2>欢迎交换友链</h2>
-      <p>很高兴在这里认识更多有趣的朋友！如果你也想和我交换友链，欢迎发邮件至
-      <a href="mailto:zhc425@126.com">zhc425@126.com</a> 联系我，并附上你的网站名称、网址和简介。</p>
+      <p>欢迎交换友链：<a href="mailto:zhc425@126.com">zhc425@126.com</a></p>
       <hr>
-      <h2>感谢</h2>
-      <p>感谢 <a href="https://github.com/hexojs/hexo" target="_blank" rel="noopener noreferrer">Hexo</a>
-      和 <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener noreferrer">Fluid</a>
-      的作者及贡献者，让这个博客得以搭建和呈现。</p>
+      <h3>感谢</h3>
+      <div class="row links">
+        <div class="card col-lg-4 col-md-6 col-sm-12">
+          <a href="https://github.com/hexojs/hexo" class="card-body hover-with-bg" target="_blank" rel="noopener noreferrer">
+            <div class="card-content"><div class="link-text"><div class="link-title">Hexo</div><div class="link-intro">博客框架</div></div></div>
+          </a>
+        </div>
+        <div class="card col-lg-4 col-md-6 col-sm-12">
+          <a href="https://github.com/fluid-dev/hexo-theme-fluid" class="card-body hover-with-bg" target="_blank" rel="noopener noreferrer">
+            <div class="card-content"><div class="link-text"><div class="link-title">Fluid</div><div class="link-intro">博客主题</div></div></div>
+          </a>
+        </div>
+      </div>
 
   # 评论插件
   # Comment plugin
