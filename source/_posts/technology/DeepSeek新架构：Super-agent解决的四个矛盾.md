@@ -48,7 +48,7 @@ Super-agent非常巧妙解决了这个问题！！！
 简单来说：用户只与Router层（包工头）交互，用户甚至感觉不到 worker层（工人）的存在。正如官方所说：Session 应当是系统的实现细节，而不应是用户的认知负担。
 用户不必知道工人怎么怎么做，你只用专注于告知包工头该做什么就行了，工人怎么搭建不需要你去额外学习。
 
-![886](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1tAz3OsOg5aiaibaodlb8mKmxlqd7fgiamrRjG4bq0xI9iaibAkHv2djdohiaKpBvuibd1IM9WqSvKnZfvMGW8D5x8Z5wePvj2Yv14gEDpgaNHNDBw/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=3)
+![1040](/imgs/Pasted%20image%2020261101165431.png)
 
 #### Router的设计：
 不同于先前的AgentTeam分配，Router只负责接收任务，交付任务，本身不需要去实现具体的模块，所以**化繁为简**，使用一个较为轻量的模型就可以了，甚至可以不配备 Bash 工具。（有时候放手是为了更好）
@@ -70,7 +70,7 @@ Subagent ---> 自动监听群消息，邮件，日志等等，并自动过滤无
 	- 第一级过滤：划分范围和来源白名单，主动过滤无关信息
 	- 第二级过滤：通过提示词指导LLM判断语义
 
-![925](https://mmbiz.qpic.cn/mmbiz_jpg/1tAz3OsOg5bg8r7T9iclTTpAy8b6afIoh5uxsOWT55ETwIAiauLMsL7Ezf8DxJUMHGianBV3b90GExr3aM9K2PDxYVjplgialfKjD7icXIAODiccc/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=4)
+![1019](/imgs/Pasted%20image%2020261101165503.png)
 
 
 ### 2.3解决的第三个矛盾：
@@ -83,7 +83,7 @@ Subagent --->  接收指令->模型思考->模型规划->调用工具（->思考
 
 简单来说：有点像CPU的并行处理
 
-![857](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1tAz3OsOg5bSP2SMWxlqib7j1yT6C7n0OtwPP73MlxbRHytBcF1I8IoZ8wlKvXvjw4fS2yibXDiat5kVk6AxUpwvPFcqXlooYrUA27ZRKmBsos/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=9)
+![949](/imgs/Pasted%20image%2020261101165516.png)
 
 
 ### 2.4解决的第四个矛盾
@@ -96,14 +96,14 @@ Super-agent ---> 将AgentLoop解耦为“云端无状态弹性容器”，将整
 
 简单来说：把一个AgentLoop、持久化存储、重状态像积木一样，通过两步解耦拆开
 
-![](https://mmbiz.qpic.cn/mmbiz_jpg/1tAz3OsOg5ab5Vq9Jl271sHTEZ0S5pOMwl6bwcEnC9LSS6PRe7eaUnjHKj1KPEFBQBNXr1C09dlyJL68dv8enou5tibGxhDh1jZdQXynicNok/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=10)
+![942](/imgs/Pasted%20image%2020261101165535.png)
 
 
 
 
 ## 结尾
 
-很喜欢原贴在最后的一句话：**回顾整套设计，我们并没有提出全新的理论，而是将计算机系统中经典的工程思想应用到了 Agent 系统的构建中。用承认“不新”的方式，把“新”落在了更扎实的地方。
+很喜欢原贴在最后的一句话：**回顾整套设计，我们并没有提出全新的理论，而是将计算机系统中经典的工程思想应用到了 Agent 系统的构建中。用承认“不新”的方式，把“新”落在了更扎实的地方。**
 
-期待DeepSeek的下一个大作！
+**期待DeepSeek的下一个大作！**
 
