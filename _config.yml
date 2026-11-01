@@ -82,3 +82,4 @@ feed:
   limit: 20
   content: true
   autodiscovery: true
+  icon: /img/chen-portrait-small.webp
