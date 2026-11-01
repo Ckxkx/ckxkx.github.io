@@ -1,0 +1,109 @@
+---
+tags:
+  - deepseek
+  - harness
+  - super-agent
+categories:
+  - 科技
+title: DeepSeek新架构：Super-agent解决的四个矛盾
+date: 2026-11-01T08:37:57.355Z
+index_img: /imgs/c404923104837eda624d53519e289fe3.png
+---
+## 1.长期以来的痛点
+### 我个人的开发经历：
+我在使用codex等工具开发复杂任务时，通常是以这样的流程：
+1.在codex中新建一个项目，开一个会话A，在A中使用最强的模型（gpt-6-astra)帮我分析规划任务，确定任务边界，明确需求，然后撰写一份大致开发文档Doc。
+	- 通过Astra模型的分析，我认为有这几个优势：
+		- 提示词标准。角色+任务+需求都非常明确，减少了口述的不专业，模棱两可的需求
+		- 边界处理得当，模型会仔细分析任务的边界，开发过程中不会越界
+		- and so on...
+2.新开一个会话B，使用中等能力的模型（gpt-6.1-terra/sol)按照开发文档Doc进行开发
+3.初步完成之后，亲自检查，测试每个功能，不断反馈给模型更改调整。
+
+#### 痛点：
+1.大模型和小模型处理到底哪个更擅长开发任务呢？Astra虽然能力非常强，但是防御性编程很严重，而且**询问次数 > 真正执行次数**（可能是gpt模型的通病吧）
+2.单个会话上下文太长了，每一次提一个小点都会思考很久，花费很多，我觉得这是一个很大的问题。新开一个会话C，又需要（**先浏览项目内容，弄清楚我的项目在做什么**），每一次都需要人为来做一个铺垫
+3.最大的问题，丢失特殊工具的使用方式，例如：在会话B中确定好了推送Github的方式，但是在新会话C中，频繁触发失败，除了AGENTS.md中的记忆，很多工具的使用方法仍需重新过一遍。
+
+#### 我：何时安得广厦千万间，大庇天下俱欢颜!风雨不动安如山。
+
+#### DeepSeekHarness：此等微末，何足挂齿，待吾速取彼首级！
+
+Super-agent非常巧妙解决了这个问题！！！
+
+![973](/imgs/Pasted%20image%2020261101144757.png)
+
+#### 我：妙哉！妙哉！
+
+## 2.Super-agent
+
+### 2.1解决的第一个矛盾：
+所有任务给同一个session ---> 上下文连续，但是思考时间长，中间任务干扰，花费高
+每个任务单独session ---> （会话1，会话2，会话3...会话1000）缺少连续性，会话多了，自己都找不到是哪个了🤡
+
+
+#### DeepSeek的解决方式：
+由常驻的 **Router层**统一承接人类交互与全局协调，由上下文隔离的 **Worker层**并发执行具体任务。
+
+简单来说：用户只与Router层（包工头）交互，用户甚至感觉不到 worker层（工人）的存在。正如官方所说：Session 应当是系统的实现细节，而不应是用户的认知负担。
+用户不必知道工人怎么怎么做，你只用专注于告知包工头该做什么就行了，工人怎么搭建不需要你去额外学习。
+
+![886](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1tAz3OsOg5aiaibaodlb8mKmxlqd7fgiamrRjG4bq0xI9iaibAkHv2djdohiaKpBvuibd1IM9WqSvKnZfvMGW8D5x8Z5wePvj2Yv14gEDpgaNHNDBw/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=3)
+
+#### Router的设计：
+不同于先前的AgentTeam分配，Router只负责接收任务，交付任务，本身不需要去实现具体的模块，所以**化繁为简**，使用一个较为轻量的模型就可以了，甚至可以不配备 Bash 工具。（有时候放手是为了更好）
+
+#### Worker的设计：
+（官方已经讲解的很清楚了）Worker 不会直接与人类交互，其推理过程和工具调用不会直接输出到外部信道，而是向 Router 层汇报状态、由 Router 层统一向用户回复，从而在保障并发度与交付质量的同时避免多个会话各自回复带来的混乱。
+
+### 2.2解决的第二个矛盾：
+传统模型 ---> 人：你帮我xxx这个pdf（接收到人类指令后才会执行）
+Subagent ---> 自动监听群消息，邮件，日志等等，并自动过滤无关信息，分析明确的需求
+
+#### DeepSeek的解决方式：
+**程序策略与大模型相结合的两级过滤机制：**
+- 程序层策略（作为 Fast Path）
+- 语义层策略（作为 Slow Path）
+
+
+简单来说：有点类似 **关键词 + 语义过滤**
+	- 第一级过滤：划分范围和来源白名单，主动过滤无关信息
+	- 第二级过滤：通过提示词指导LLM判断语义
+
+![925](https://mmbiz.qpic.cn/mmbiz_jpg/1tAz3OsOg5bg8r7T9iclTTpAy8b6afIoh5uxsOWT55ETwIAiauLMsL7Ezf8DxJUMHGianBV3b90GExr3aM9K2PDxYVjplgialfKjD7icXIAODiccc/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=4)
+
+
+### 2.3解决的第三个矛盾：
+经典 ReActLoop  --->  接收指令->模型思考->模型规划->调用工具->思考回答->确认回复 **用户从发送指令后一直等待，直到收到模型回复**
+Subagent --->  接收指令->模型思考->模型规划->调用工具（->思考回答->确认回复）->立即返回 **用户发送指令后，模型开始调用工具时就返回通知，用户就不必等待**
+
+
+#### DeepSeek的解决方式：
+将**同步的ReAct Loop**改为异步的 `start()` 和 `stop()`，构成**异步 ReAct Loop**。模型调用 `start()` 后立即收到“已启动（Started）”的返回，循环不再等待该工具；在后台工具执行完成后，系统再将最终结果作为一条新的事件消息投递进会话；同时，模型也可以根据上下文调用 `stop()` 主动终止执行时间过长的后台命令。
+
+简单来说：有点像CPU的并行处理
+
+![857](https://mmbiz.qpic.cn/sz_mmbiz_jpg/1tAz3OsOg5bSP2SMWxlqib7j1yT6C7n0OtwPP73MlxbRHytBcF1I8IoZ8wlKvXvjw4fS2yibXDiat5kVk6AxUpwvPFcqXlooYrUA27ZRKmBsos/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=9)
+
+
+### 2.4解决的第四个矛盾
+现有Agent ---> AgentLoop 的**计算**、会话**状态**以及代码仓库与本地工具链等执行**环境**绑定在同一台设备上，关机即停止。
+Super-agent ---> 将AgentLoop解耦为“云端无状态弹性容器”，将整体拆解为几个模块，更换设备也能接入AgentLoop
+
+#### DeepSeek的解决方式：
+第一步先将推进 Agent Loop 的计算与持久化的会话状态分离，使 Agent 摆脱单机生命周期限制、实现云端持久在线；
+第二步再将云端的 Agent Loop 与重状态的执行环境解耦，让真实工作环境留在原地并支持跨设备访问。
+
+简单来说：把一个AgentLoop、持久化存储、重状态像积木一样，通过两步解耦拆开
+
+![](https://mmbiz.qpic.cn/mmbiz_jpg/1tAz3OsOg5ab5Vq9Jl271sHTEZ0S5pOMwl6bwcEnC9LSS6PRe7eaUnjHKj1KPEFBQBNXr1C09dlyJL68dv8enou5tibGxhDh1jZdQXynicNok/640?wx_fmt=jpeg&tp=wxpic&wxfrom=5&wx_lazy=1#imgIndex=10)
+
+
+
+
+## 结尾
+
+很喜欢原贴在最后的一句话：**回顾整套设计，我们并没有提出全新的理论，而是将计算机系统中经典的工程思想应用到了 Agent 系统的构建中。用承认“不新”的方式，把“新”落在了更扎实的地方。
+
+期待DeepSeek的下一个大作！
+
