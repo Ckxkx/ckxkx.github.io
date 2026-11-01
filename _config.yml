@@ -74,3 +74,11 @@ sitemap:
   path: sitemap.xml
   tags: true
   categories: true
+
+# RSS 订阅
+feed:
+  type: rss2
+  path: rss.xml
+  limit: 20
+  content: true
+  autodiscovery: true

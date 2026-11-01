@@ -1012,6 +1012,7 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/Ckxkx", tip: "GitHub" }
     - { class: "iconfont icon-mail", link: "mailto:zhc425@126.com", tip: "邮件" }
+    - { class: "iconfont icon-rss", link: "/rss.xml", tip: "RSS 订阅" }
 
 
 #---------------------------
