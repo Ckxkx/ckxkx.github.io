@@ -3,6 +3,7 @@
 const pagination = require('hexo-pagination');
 const order = [
   "云不喜火锅后记.md",
+  "使用Taio修改苹果手机隐藏文件.md",
   "苏大机试第三批-回忆版.md",
   "technology/从源码角度理解Transformer.md",
   "essays/欢迎来到chen.md",
@@ -24,8 +25,8 @@ hexo.extend.generator.register('index', function(locals) {
   function path(post) { return String(post.source || '').replace(/\\/g, '/').replace(/^_posts\//, ''); }
   posts.data.sort((a, b) => {
     const pa = path(a), pb = path(b);
-    const ra = rank.has(pa) ? rank.get(pa) : -1;
-    const rb = rank.has(pb) ? rank.get(pb) : -1;
+    const ra = rank.has(pa) ? rank.get(pa) : Number.MAX_SAFE_INTEGER;
+    const rb = rank.has(pb) ? rank.get(pb) : Number.MAX_SAFE_INTEGER;
     return ra - rb || pa.localeCompare(pb, 'zh-CN');
   });
   return pagination(config.index_generator.path || '', posts, {
