@@ -1,7 +1,7 @@
 ---
 date: 2026-10-30 00:36:13
 permalink: /2026/10/30/welcome/
-index_img: /img/首页背景.webp
+index_img: /imgs/首页背景.webp
 title: Hexo 的第一篇笔记
 tags:
   - 开始
