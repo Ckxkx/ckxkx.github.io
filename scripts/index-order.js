@@ -2,18 +2,19 @@
 'use strict';
 const pagination = require('hexo-pagination');
 const order = [
-  '苏大机试第三批-回忆版.md',
-  'technology/从源码角度理解Transformer.md',
-  'essays/欢迎来到chen.md',
-  'learning/本科期间获奖经历.md',
-  'learning/大唐杯证书查询步骤.md',
-  'technology/Ubuntu网络恢复.md',
-  'technology/刷新Windows环境变量.md',
-  'technology/删除项目Git链接.md',
-  'technology/苹果图书云端同步.md',
-  'technology/Termux手机服务器教程.md',
-  'movies/歪比巴卜影院.md',
-  'movies/爱看机器人影视.md'
+  "云不喜火锅后记.md",
+  "苏大机试第三批-回忆版.md",
+  "technology/从源码角度理解Transformer.md",
+  "essays/欢迎来到chen.md",
+  "learning/本科期间获奖经历.md",
+  "learning/大唐杯证书查询步骤.md",
+  "technology/Ubuntu网络恢复.md",
+  "technology/刷新Windows环境变量.md",
+  "technology/删除项目Git链接.md",
+  "technology/苹果图书云端同步.md",
+  "technology/Termux手机服务器教程.md",
+  "movies/歪比巴卜影院.md",
+  "movies/爱看机器人影视.md"
 ];
 const rank = new Map(order.map((name, i) => [name, i]));
 hexo.extend.filter.register('after_init', function() {
