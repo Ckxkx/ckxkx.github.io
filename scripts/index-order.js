@@ -1,39 +1,51 @@
-/* 首页按下方名单固定排序：新文章发布后，将文件相对 source/_posts 的路径加到列表最前面。 */
+/* 首页统一按首次发布的 Git 提交时间倒序；无完整 Git 历史时使用文章日期。 */
 'use strict';
+
 const pagination = require('hexo-pagination');
-const order = [
-  "云不喜火锅后记.md",
-  "使用Taio修改苹果手机隐藏文件.md",
-  "苏大机试第三批-回忆版.md",
-  "technology/从源码角度理解Transformer.md",
-  "essays/欢迎来到chen.md",
-  "learning/本科期间获奖经历.md",
-  "learning/大唐杯证书查询步骤.md",
-  "technology/Ubuntu网络恢复.md",
-  "technology/刷新Windows环境变量.md",
-  "technology/删除项目Git链接.md",
-  "technology/苹果图书云端同步.md",
-  "technology/Termux手机服务器教程.md",
-  "movies/歪比巴卜影院.md",
-  "movies/爱看机器人影视.md"
-];
-const rank = new Map(order.map((name, i) => [name, i]));
+const { execFileSync } = require('child_process');
+
 hexo.extend.filter.register('after_init', function() {
-hexo.extend.generator.register('index', function(locals) {
-  const config = this.config;
-  const posts = locals.posts.sort('source');
-  function path(post) { return String(post.source || '').replace(/\\/g, '/').replace(/^_posts\//, ''); }
-  posts.data.sort((a, b) => {
-    const pa = path(a), pb = path(b);
-    const ra = rank.has(pa) ? rank.get(pa) : Number.MAX_SAFE_INTEGER;
-    const rb = rank.has(pb) ? rank.get(pb) : Number.MAX_SAFE_INTEGER;
-    return ra - rb || pa.localeCompare(pb, 'zh-CN');
+  hexo.extend.generator.register('index', function(locals) {
+    const config = this.config;
+    const posts = locals.posts.sort('source');
+    const sourceDir = (config.source_dir || 'source').replace(/\\/g, '/').replace(/\/$/, '');
+    const times = new Map();
+
+    function path(post) {
+      return String(post.source || '').replace(/\\/g, '/').replace(/^_posts\//, '');
+    }
+    function articleDate(post) {
+      const date = post.date && typeof post.date.valueOf === 'function' ? Number(post.date.valueOf()) : 0;
+      return Number.isFinite(date) ? date : 0;
+    }
+
+    for (const post of posts.data) {
+      const name = path(post);
+      let firstPublished = 0;
+      try {
+        const file = sourceDir + '/_posts/' + name;
+        const result = execFileSync('git', ['log', '--follow', '-1', '--diff-filter=A', '--format=%ct', '--', file], {
+          encoding: 'utf8',
+          stdio: ['ignore', 'pipe', 'ignore']
+        }).trim();
+        if (/^\d+$/.test(result)) firstPublished = Number(result) * 1000;
+      } catch (_) {
+        // 本地无 Git 或历史时仍可以生成网站。
+      }
+      times.set(name, firstPublished || articleDate(post));
+    }
+
+    posts.data.sort((a, b) => {
+      const pa = path(a), pb = path(b);
+      return (times.get(pb) || 0) - (times.get(pa) || 0)
+        || articleDate(b) - articleDate(a)
+        || pa.localeCompare(pb, 'zh-CN');
+    });
+    return pagination(config.index_generator.path || '', posts, {
+      perPage: config.index_generator.per_page,
+      layout: config.index_generator.layout || ['index', 'archive'],
+      format: (config.index_generator.pagination_dir || config.pagination_dir || 'page') + '/%d/',
+      data: { __index: true }
+    });
   });
-  return pagination(config.index_generator.path || '', posts, {
-    perPage: config.index_generator.per_page,
-    layout: config.index_generator.layout || ['index', 'archive'],
-    format: (config.index_generator.pagination_dir || config.pagination_dir || 'page') + '/%d/',
-    data: { __index: true }
-  });
-});
 });
