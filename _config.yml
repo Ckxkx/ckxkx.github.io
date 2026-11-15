@@ -11,7 +11,7 @@ language: zh-CN
 timezone: Asia/Shanghai
 
 # 部署地址（GitHub Pages 用户站点，根路径）
-url: https://ckxkx.github.io
+url: https://huichen.dev
 root: /
 
 # 导航栏
