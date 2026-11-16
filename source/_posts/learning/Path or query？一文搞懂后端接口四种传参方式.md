@@ -3,7 +3,7 @@ categories:
   - 学习
 title: Path or query？一文搞懂后端接口四种传参方式
 date: 2026-11-14T08:04:53.839Z
-index_img: /imgs/%E5%90%8E%E7%AB%AF%E6%8E%A5%E5%8F%A3%E5%9B%9B%E7%A7%8D%E5%8F%82%E6%95%B0%E6%96%B9%E5%BC%8F%E8%AF%A6%E8%A7%A3.png
+index_img: https://img.huichen.kdns.fr/imgs/20261116164816801.webp
 ---
 ## ⁠1 ⁠先记结论
 ### ⁠1.1 ⁠CRUD 常用传参方式
