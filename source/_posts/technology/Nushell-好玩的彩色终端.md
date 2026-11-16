@@ -8,7 +8,7 @@ categories:
   - 科技
 title: Nushell-好玩的彩色终端
 date: 2026-11-08T08:31:24.788Z
-index_img: /imgs/c7f82c03832bccfc548e9e7a051ea792.png
+index_img: https://img.huichen.kdns.fr/imgs/20261116165100425.webp
 ---
 
 # Nushell 评测：当 shell 开始认真对待"数据"
