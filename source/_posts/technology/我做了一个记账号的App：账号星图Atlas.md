@@ -86,6 +86,8 @@ index_img: /imgs/atlas/cover.webp
 
 项目地址：[github.com/Ckxkx/account-atlas](https://github.com/Ckxkx/account-atlas)。有 bug 或者想要的功能，欢迎去提 Issue。
 
+> 源码目前转为私有维护：之前出现过二次打包、倒卖的风险。App 永久免费，只从这个仓库的 Releases 和本站发布，任何收费渠道都不是官方的。
+
 ## 最后
 
 做这个的初衷就是不想再买错号了。现在每注册一个新东西，我都会顺手记一笔，心里踏实很多。
