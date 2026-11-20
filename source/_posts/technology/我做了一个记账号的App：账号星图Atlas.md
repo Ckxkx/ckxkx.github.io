@@ -78,6 +78,8 @@ index_img: /imgs/atlas/cover.webp
 
 ## 怎么用
 
+> 📖 手把手带图的安装教程在这里：[账号星图 Atlas 安装图解：安卓和 iPhone 都能装](/2026/11/20/technology/账号星图Atlas安装图解：安卓和iPhone/)，安卓 APK 也可以直接在那篇里下载。
+
 - **iPhone（最简单）**：Safari 打开 [huichen.dev/account-atlas](https://huichen.dev/account-atlas/)，点分享（iOS 26 先点右下角的“⋯”），再点“添加到主屏幕”，桌面就多了一个 App。
 - **iPhone 原生版**：去 [GitHub Releases](https://github.com/Ckxkx/account-atlas/releases/latest) 下载 `Atlas.ipa`，用 SideStore、爱思助手或 Sideloadly 自签安装。
 - **安卓**：同一个页面下载 `Atlas.apk` 直接安装；或者用 Chrome 打开网页版，右上角“⋮”添加到主屏幕。
